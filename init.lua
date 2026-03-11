@@ -612,7 +612,14 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
 
-        stylua = {}, -- Used to format Lua code
+        ['stylua'] = {}, -- Used to format Lua code
+        ['beautysh'] = {},
+        ['docker-language-server'] = {},
+        ['html-lsp'] = {},
+        ['lua-language-server'] = {},
+        ['prettier'] = {},
+        ['python-lsp-server'] = {},
+        ['yamlfix'] = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
