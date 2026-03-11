@@ -701,7 +701,16 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        -- javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        javascript = { 'prettier', stop_after_first = true },
+        javascriptreact = { 'prettier', stop_after_first = true },
+        typeascript = { 'prettier', stop_after_first = true },
+        typeascriptreact = { 'prettier', stop_after_first = true },
+        html = { 'prettier', stop_after_first = true },
+        markdown = { 'prettier', stop_after_first = true },
+        json = { 'prettier', stop_after_first = true },
+        yaml = { 'yamlfix', stop_after_first = true },
+        sh = { 'beautysh', stop_after_first = true },
       },
     },
   },
