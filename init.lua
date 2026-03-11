@@ -620,6 +620,8 @@ require('lazy').setup({
         ['prettier'] = {},
         ['python-lsp-server'] = {},
         ['yamlfix'] = {},
+        ['texlab'] = {},
+        ['tex-fmt'] = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
@@ -718,6 +720,7 @@ require('lazy').setup({
         json = { 'prettier', stop_after_first = true },
         yaml = { 'yamlfix', stop_after_first = true },
         sh = { 'beautysh', stop_after_first = true },
+        tex = { 'tex-fmt', stop_after_first = true },
       },
     },
   },
@@ -891,7 +894,7 @@ require('lazy').setup({
     branch = 'main',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
     config = function()
-      local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+      local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'javascript', 'javascriptreact' }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)
