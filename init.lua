@@ -623,6 +623,7 @@ require('lazy').setup({
         ['texlab'] = {},
         ['tex-fmt'] = {},
         ['nginx-config-formatter'] = {},
+        ['gopls'] = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
@@ -724,6 +725,7 @@ require('lazy').setup({
         tex = { 'tex-fmt', stop_after_first = true },
         dockerfile = { 'docker-language-server', stop_after_first = true },
         nginx = { 'nginx-config-formatter', stop_after_first = true },
+        go = { 'gopls', stop_after_first = true },
       },
     },
   },
@@ -914,6 +916,7 @@ require('lazy').setup({
         'dockerfile',
         'json',
         'nginx',
+        'go',
       }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
