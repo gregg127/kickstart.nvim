@@ -618,12 +618,14 @@ require('lazy').setup({
         ['html-lsp'] = {},
         ['lua-language-server'] = {},
         ['prettier'] = {},
+        ['prettierd'] = {},
         ['python-lsp-server'] = {},
         ['yamlfix'] = {},
         ['texlab'] = {},
         ['tex-fmt'] = {},
         ['nginx-config-formatter'] = {},
         ['gopls'] = {},
+        ['checkmake'] = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
@@ -713,10 +715,10 @@ require('lazy').setup({
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { 'prettierd', 'prettier', stop_after_first = true },
-        javascript = { 'prettier', stop_after_first = true },
-        javascriptreact = { 'prettier', stop_after_first = true },
-        typeascript = { 'prettier', stop_after_first = true },
-        typeascriptreact = { 'prettier', stop_after_first = true },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         html = { 'prettier', stop_after_first = true },
         markdown = { 'prettier', stop_after_first = true },
         json = { 'prettier', stop_after_first = true },
@@ -726,6 +728,7 @@ require('lazy').setup({
         dockerfile = { 'docker-language-server', stop_after_first = true },
         nginx = { 'nginx-config-formatter', stop_after_first = true },
         go = { 'gopls', stop_after_first = true },
+        make = { 'checkmake', stop_after_first = true },
       },
     },
   },
@@ -912,11 +915,13 @@ require('lazy').setup({
         'vim',
         'vimdoc',
         'javascript',
-        'javascriptreact',
+        'typescript',
+        'tsx',
         'dockerfile',
         'json',
         'nginx',
         'go',
+        'make',
       }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
