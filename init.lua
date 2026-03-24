@@ -626,6 +626,8 @@ require('lazy').setup({
         ['nginx-config-formatter'] = {},
         ['gopls'] = {},
         ['checkmake'] = {},
+        ['isort'] = {},
+        ['black'] = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
@@ -729,6 +731,7 @@ require('lazy').setup({
         nginx = { 'nginx-config-formatter', stop_after_first = true },
         go = { 'gopls', stop_after_first = true },
         make = { 'checkmake', stop_after_first = true },
+        python = { 'black', 'isort' },
       },
     },
   },
