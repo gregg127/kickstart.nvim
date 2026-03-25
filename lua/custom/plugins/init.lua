@@ -8,7 +8,7 @@
 
 -- Custom keymaps
 local keymap = vim.keymap.set
-keymap('n', '<leader>c', ':CopilotChatToggle<CR>', { desc = 'Toggle [C]opilot chat' })
+--keymap('n', '<leader>c', ':CopilotChatToggle<CR>', { desc = 'Toggle [C]opilot chat' })
 --keymap('n', '<leader>cr', ':CopilotChatReset<CR>', { desc = '[C]opilot chat [reset]' })
 
 return {}
