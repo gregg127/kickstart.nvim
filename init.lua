@@ -628,6 +628,7 @@ require('lazy').setup({
         ['checkmake'] = {},
         ['isort'] = {},
         ['black'] = {},
+        ['jdtls'] = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
@@ -732,6 +733,7 @@ require('lazy').setup({
         go = { 'gopls', stop_after_first = true },
         make = { 'checkmake', stop_after_first = true },
         python = { 'black', 'isort' },
+        java = { 'jdtls', stop_after_first = true },
       },
     },
   },
