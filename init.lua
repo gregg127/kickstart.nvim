@@ -927,6 +927,7 @@ require('lazy').setup({
         'nginx',
         'go',
         'make',
+        'java',
       }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
