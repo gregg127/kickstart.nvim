@@ -1,6 +1,11 @@
 -- Neo-tree is a Neovim plugin to browse the file system
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
+-- This is a custom plugin definition.
+-- Plugin in lua/kickstart/plugins/neo-tree.lua is not enabled due to commented line
+-- require 'kickstart.plugins.neo-tree'
+-- in init.lua file.
+
 ---@module 'lazy'
 ---@type LazySpec
 return {

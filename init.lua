@@ -613,22 +613,6 @@ require('lazy').setup({
         -- ts_ls = {},
 
         ['stylua'] = {}, -- Used to format Lua code
-        ['beautysh'] = {},
-        ['docker-language-server'] = {},
-        ['html-lsp'] = {},
-        ['lua-language-server'] = {},
-        ['prettier'] = {},
-        ['prettierd'] = {},
-        ['python-lsp-server'] = {},
-        ['yamlfix'] = {},
-        ['texlab'] = {},
-        ['tex-fmt'] = {},
-        ['nginx-config-formatter'] = {},
-        ['gopls'] = {},
-        ['checkmake'] = {},
-        ['isort'] = {},
-        ['black'] = {},
-        ['jdtls'] = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
@@ -712,28 +696,12 @@ require('lazy').setup({
         end
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
+        -- rust = { 'rustfmt' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { 'prettierd', 'prettier', stop_after_first = true },
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
-        javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-        typescript = { 'prettierd', 'prettier', stop_after_first = true },
-        typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-        html = { 'prettier', stop_after_first = true },
-        markdown = { 'prettier', stop_after_first = true },
-        json = { 'prettier', stop_after_first = true },
-        yaml = { 'yamlfix', stop_after_first = true },
-        sh = { 'beautysh', stop_after_first = true },
-        tex = { 'tex-fmt', stop_after_first = true },
-        dockerfile = { 'docker-language-server', stop_after_first = true },
-        nginx = { 'nginx-config-formatter', stop_after_first = true },
-        go = { 'gopls', stop_after_first = true },
-        make = { 'checkmake', stop_after_first = true },
-        python = { 'black', 'isort' },
-        java = { 'jdtls', stop_after_first = true },
+        -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
   },
@@ -907,28 +875,7 @@ require('lazy').setup({
     branch = 'main',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
     config = function()
-      local parsers = {
-        'bash',
-        'c',
-        'diff',
-        'html',
-        'lua',
-        'luadoc',
-        'markdown',
-        'markdown_inline',
-        'query',
-        'vim',
-        'vimdoc',
-        'javascript',
-        'typescript',
-        'tsx',
-        'dockerfile',
-        'json',
-        'nginx',
-        'go',
-        'make',
-        'java',
-      }
+      local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)

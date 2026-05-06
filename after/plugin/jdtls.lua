@@ -1,3 +1,6 @@
+-----------------------------------------------------------------------------
+--- Java LSP configuration (eclipse.jdt.ls)
+-----------------------------------------------------------------------------
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.fn.stdpath 'data' .. package.config:sub(1, 1) .. 'jdtls-workspace' .. package.config:sub(1, 1) .. project_name
 vim.lsp.config('jdtls', {
